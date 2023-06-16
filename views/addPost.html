@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Post</title>
+
+    <link rel="stylesheet" href="\public\css\main.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Add Post</h2><br>
+        <div class="left-side">
+            <h3>Featured Image<hr></h3>
+            <form action="/posts/add" method="post" enctype="multipart/form-data">
+                <input type="file" id="image" name="image">
+
+        </div><br>
+        <h4> Post Content<hr></h4>
+        <div class="right-side">
+
+            <div class="form-group">
+
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title" style="width: 100%;">
+            </div><br>
+            <div class="form-group">
+                <label for="body">Body:</label><br>
+                <textarea id="body" name="body" style="width: 100%;"></textarea>
+            </div>
+            <div class="form-group">
+                <br>
+                <label for="category">Category:</label>&ensp;
+                <select id="category" name="category" style="width: 30%;">
+                    <option value="Technology">Technology</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Education">Education</option>
+                    <option value="Wellness">Wellness</option>
+                </select>
+                <br /><br />
+
+                <label for="visibility">Visibility:</label>
+                <input type="radio" id="public" name="visibility" value="public">
+                <label for="publish">Publish</label>
+            </div><br>
+        </div>
+        <div class="right-side">
+            <button type="submit" value="Add" onclick="addpost()" style="float: right;">Add Post</button>
+        </div>
+        </form>
+    </div>
+    </div>
+    <div id="posts"></div>
+    <script src="blog-service.js"></script>
+</body>
+</html>

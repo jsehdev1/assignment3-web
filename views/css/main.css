@@ -1,0 +1,18 @@
+.p {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.partA {
+	display: inline-block;
+	max-width: 200px;
+	
+}
+Body{
+	background-color:darkkhaki;
+
+}
+body {
+	background-color: lightblue;
+}
